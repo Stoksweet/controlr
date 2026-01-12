@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Control Mouse</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hand Control Mouse</h1>
+        <p>Use your hand to control the cursor.</p>
+        <div class="video-container">
+            <video class="input_video"></video>
+            <canvas class="output_canvas" width="1280px" height="720px"></canvas>
+        </div>
+        <div class="instructions">
+            <div class="instruction-card">
+                <h3>Move</h3>
+                <p>Open Hand</p>
+            </div>
+            <div class="instruction-card">
+                <h3>Click</h3>
+                <p>Pinch Index + Thumb</p>
+            </div>
+            <div class="instruction-card">
+                <h3>Scroll</h3>
+                <p>Pinch Middle + Thumb & Move Index</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
